@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cd1-ma-u3l"/>
+                                    <action selector="nextbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJE-DK-PM1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEe-Tw-bnj">
@@ -49,11 +49,11 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="jkH-mu-tYe" id="7V1-ro-huG"/>
-                        <outlet property="nextButton" destination="Q3n-bq-OCD" id="mje-6p-oJC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="698" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f6G-Pc-3pi">
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TP7-Gz-baS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="27"/>
+            <point key="canvasLocation" x="1351" y="135"/>
         </scene>
     </scenes>
 </document>
