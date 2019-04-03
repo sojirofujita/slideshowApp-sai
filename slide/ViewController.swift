@@ -16,8 +16,12 @@ class ViewController: UIViewController {
     //Imageviewをoutlet接続。後のIBactionでImageViewの画像をいじるため恐らく必要。
     @IBOutlet weak var imageView: UIImageView!
     
-   ///
+    
     var timer: Timer!
+    
+    
+    //変数timer_sec(型Float) ＝０宣言
+    var timer_sec:Float = 0
     
     //次へボタンをAction接続。ImageViewを触るため必要。
     @IBAction func nextbutton(_ sender: Any) {
@@ -66,25 +70,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-      ///
-        let image = UIImage(named:"image1.jpg")
-        
-        imageView.image = image
-        
-        
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.onTimer(_:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer(_ timer: Timer){
+        self.timer_sec += 2.0
+        let imageNameArray = ["image1.jpg","image2.jpg","image3.jpeg"]
+        let name = imageNameArray[dispImageNo]
+        let image = UIImage(named: name)
+        self.imageView.image = image
+        self.timer_sec += 2.0
+        dispImageNo += 1
+        if dispImageNo > 2{
+            dispImageNo = 0
+        }
         
     }
     
-    
-    func onTimer(timer: Timer){
-        
-
-print("onTimer")
+    @IBAction func startTimer(_ sender: Any) {
+    self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
     }
-    
-  ///
-    }
+}
 
 
 
