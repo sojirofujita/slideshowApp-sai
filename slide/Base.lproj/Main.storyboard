@@ -42,8 +42,15 @@
                                     <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cC-dM-ZBs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAO-Qn-EGo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="5G6-wg-qSb" kind="show" id="4Z0-kl-BKe"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-mu-tYe">
-                                <rect key="frame" x="67" y="170" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -53,6 +60,7 @@
                     <connections>
                         <outlet property="imageView" destination="jkH-mu-tYe" id="7V1-ro-huG"/>
                         <outlet property="nextbutton2" destination="Q3n-bq-OCD" id="bHw-F5-80m"/>
+                        <outlet property="nextfieldbutton" destination="pAO-Qn-EGo" id="seG-jr-h9a"/>
                         <outlet property="previousbutton2" destination="hEe-Tw-bnj" id="JdC-OM-b5A"/>
                         <outlet property="startStopButton" destination="n76-rn-Oon" id="x2Y-a5-vfU"/>
                     </connections>
@@ -61,20 +69,29 @@
             </objects>
             <point key="canvasLocation" x="696.79999999999995" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="f6G-Pc-3pi">
             <objects>
-                <viewController id="5G6-wg-qSb" sceneMemberID="viewController">
+                <viewController id="5G6-wg-qSb" customClass="ResultViewController" customModule="slide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TU9-f1-Lzd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-1P-jyy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1ec-vT-nZR"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="gV4-1P-jyy" id="QBi-Hm-Naw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TP7-Gz-baS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="135"/>
+            <point key="canvasLocation" x="1349.5999999999999" y="134.48275862068968"/>
         </scene>
     </scenes>
 </document>

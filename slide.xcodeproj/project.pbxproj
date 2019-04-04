@@ -15,6 +15,7 @@
 		CE603D1D22521F400021FEAE /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE603D1C22521F400021FEAE /* image1.jpg */; };
 		CE603D1F22521F480021FEAE /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE603D1E22521F480021FEAE /* image2.jpg */; };
 		CE603D2122521F500021FEAE /* image3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE603D2022521F4F0021FEAE /* image3.jpeg */; };
+		CE759A2F225622F400A73359 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759A2E225622F400A73359 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE603D1C22521F400021FEAE /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		CE603D1E22521F480021FEAE /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		CE603D2022521F4F0021FEAE /* image3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpeg; sourceTree = "<group>"; };
+		CE759A2E225622F400A73359 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CE603D1122521C050021FEAE /* Assets.xcassets */,
 				CE603D1322521C050021FEAE /* LaunchScreen.storyboard */,
 				CE603D1622521C050021FEAE /* Info.plist */,
+				CE759A2E225622F400A73359 /* ResultViewController.swift */,
 			);
 			path = slide;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				CE603D0D22521C040021FEAE /* ViewController.swift in Sources */,
 				CE603D0B22521C040021FEAE /* AppDelegate.swift in Sources */,
+				CE759A2F225622F400A73359 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

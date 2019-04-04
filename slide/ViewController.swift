@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var previousbutton2: UIButton!
     
+    @IBOutlet weak var nextfieldbutton: UIButton!
     var timer: Timer!
     var tapCount = 0
     
@@ -75,7 +76,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let resultViewController = segue.destination as! ResultViewController
+       resultViewController.image = imageView.image
     }
     
     @objc func updateTimer(_ timer: Timer){
