@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var previousbutton2: UIButton!
+    
     var timer: Timer!
+    var tapCount = 0
     
     
     //変数timer_sec(型Float) ＝０宣言
@@ -77,24 +79,34 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer(_ timer: Timer){
-        nextbutton2.isEnabled = false
-        previousbutton2.isEnabled = false
-        startStopButton.setTitle("停止", for: .normal)
-        let imageNameArray = ["image1.jpg","image2.jpg","image3.jpeg"]
-        let name = imageNameArray[dispImageNo]
-        let image = UIImage(named: name)
-        self.imageView.image = image
-        dispImageNo += 1
-        if dispImageNo > 2{
-            dispImageNo = 0
+        if tapCount % 2 == 0 {
+            startStopButton.setTitle("再生", for: .normal)
+            nextbutton2.isEnabled = true
+            previousbutton2.isEnabled = true
+            self.timer.invalidate()
+        
+            }
+        else  {nextbutton2.isEnabled = false
+            previousbutton2.isEnabled = false
+            startStopButton.setTitle("停止", for: .normal)
+            let imageNameArray = ["image1.jpg","image2.jpg","image3.jpeg"]
+            let name = imageNameArray[dispImageNo]
+            let image = UIImage(named: name)
+            self.imageView.image = image
+            dispImageNo += 1
+            if dispImageNo > 2{
+                dispImageNo = 0
             
-        }
+            }
+            }
         
     }
     
     @IBAction func startTimer(_ sender: Any) {
+        tapCount += 1
     self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
     }
+    
 }
 
 
