@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextbutton2: UIButton!
     
+    @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var previousbutton2: UIButton!
     var timer: Timer!
     
@@ -78,6 +79,7 @@ class ViewController: UIViewController {
     @objc func updateTimer(_ timer: Timer){
         nextbutton2.isEnabled = false
         previousbutton2.isEnabled = false
+        startStopButton.setTitle("停止", for: .normal)
         let imageNameArray = ["image1.jpg","image2.jpg","image3.jpeg"]
         let name = imageNameArray[dispImageNo]
         let image = UIImage(named: name)
