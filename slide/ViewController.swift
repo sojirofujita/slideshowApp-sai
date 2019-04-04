@@ -16,7 +16,9 @@ class ViewController: UIViewController {
     //Imageviewをoutlet接続。後のIBactionでImageViewの画像をいじるため恐らく必要。
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var nextbutton2: UIButton!
     
+    @IBOutlet weak var previousbutton2: UIButton!
     var timer: Timer!
     
     
@@ -24,7 +26,8 @@ class ViewController: UIViewController {
     var timer_sec:Float = 0
     
     //次へボタンをAction接続。ImageViewを触るため必要。
-    @IBAction func nextbutton(_ sender: Any) {
+    @IBAction func nextbutton(_ sender: Any)
+    {
         //表示した画像の番号を１増やす
         dispImageNo += 1
         
@@ -73,15 +76,16 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer(_ timer: Timer){
-        self.timer_sec += 2.0
+        nextbutton2.isEnabled = false
+        previousbutton2.isEnabled = false
         let imageNameArray = ["image1.jpg","image2.jpg","image3.jpeg"]
         let name = imageNameArray[dispImageNo]
         let image = UIImage(named: name)
         self.imageView.image = image
-        self.timer_sec += 2.0
         dispImageNo += 1
         if dispImageNo > 2{
             dispImageNo = 0
+            
         }
         
     }

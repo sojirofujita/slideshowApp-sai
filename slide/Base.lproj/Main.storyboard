@@ -52,11 +52,13 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="jkH-mu-tYe" id="7V1-ro-huG"/>
+                        <outlet property="nextbutton2" destination="Q3n-bq-OCD" id="bHw-F5-80m"/>
+                        <outlet property="previousbutton2" destination="hEe-Tw-bnj" id="JdC-OM-b5A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="134"/>
+            <point key="canvasLocation" x="696.79999999999995" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f6G-Pc-3pi">
