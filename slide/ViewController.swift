@@ -16,13 +16,22 @@ class ViewController: UIViewController {
     //Imageviewをoutlet接続。後のIBactionでImageViewの画像をいじるため恐らく必要。
     @IBOutlet weak var imageView: UIImageView!
     
+    //次へボタンの表示をisenabledするためoutlet接続
     @IBOutlet weak var nextbutton2: UIButton!
     
+    //再生・停止ボタンの表示を切り替えるためoutlet接続
     @IBOutlet weak var startStopButton: UIButton!
+    
+    //戻るボタンの表示をisenabledするためoutlet接続
     @IBOutlet weak var previousbutton2: UIButton!
     
+    //segueで遷移先へ移行するためoutlet接続
     @IBOutlet weak var nextfieldbutton: UIButton!
+    
+    //???
     var timer: Timer!
+    
+    //再生停止ボタンのタップ回数をカウントするため、宣言
     var tapCount = 0
     
     
@@ -35,15 +44,18 @@ class ViewController: UIViewController {
         //表示した画像の番号を１増やす
         dispImageNo += 1
         
+        //displayImage関数の呼び出し実行
         displayImage()
     }
 
+    //戻るボタンをAction接続。imageViewを触るため必要
     @IBAction func prevbutton(_ sender: Any) {
+        
         //表示した画像の番号を１減らす
         dispImageNo -= 1
         
+        //displayImage関数の呼び出し実行
         displayImage()
-        
     }
     
     //変数名dispImageNoを０で宣言
@@ -77,7 +89,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         }
+    //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        self.timer!.invalidate()
         let resultViewController = segue.destination as! ResultViewController
        resultViewController.image = imageView.image
     }
@@ -109,6 +123,9 @@ class ViewController: UIViewController {
     @IBAction func startTimer(_ sender: Any) {
         tapCount += 1
     self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+    }
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+        
     }
     
 }
