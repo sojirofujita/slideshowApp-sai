@@ -91,9 +91,11 @@ class ViewController: UIViewController {
         }
     //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        self.timer!.invalidate()
         let resultViewController = segue.destination as! ResultViewController
        resultViewController.image = imageView.image
+        if timer != nil {
+            self.timer.invalidate()
+        }
     }
     
     @objc func updateTimer(_ timer: Timer){

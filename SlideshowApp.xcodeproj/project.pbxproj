@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE603D0722521C040021FEAE /* slide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE603D0722521C040021FEAE /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE603D0A22521C040021FEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE603D0C22521C040021FEAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE603D0F22521C040021FEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		CE603D0822521C040021FEAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE603D0722521C040021FEAE /* slide.app */,
+				CE603D0722521C040021FEAE /* SlideshowApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE603D0622521C040021FEAE /* slide */ = {
+		CE603D0622521C040021FEAE /* SlideshowApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE603D1922521C050021FEAE /* Build configuration list for PBXNativeTarget "slide" */;
+			buildConfigurationList = CE603D1922521C050021FEAE /* Build configuration list for PBXNativeTarget "SlideshowApp" */;
 			buildPhases = (
 				CE603D0322521C040021FEAE /* Sources */,
 				CE603D0422521C040021FEAE /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = slide;
+			name = SlideshowApp;
 			productName = slide;
-			productReference = CE603D0722521C040021FEAE /* slide.app */;
+			productReference = CE603D0722521C040021FEAE /* SlideshowApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE603D0222521C040021FEAE /* Build configuration list for PBXProject "slide" */;
+			buildConfigurationList = CE603D0222521C040021FEAE /* Build configuration list for PBXProject "SlideshowApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE603D0622521C040021FEAE /* slide */,
+				CE603D0622521C040021FEAE /* SlideshowApp */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE603D0222521C040021FEAE /* Build configuration list for PBXProject "slide" */ = {
+		CE603D0222521C040021FEAE /* Build configuration list for PBXProject "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE603D1722521C050021FEAE /* Debug */,
@@ -340,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE603D1922521C050021FEAE /* Build configuration list for PBXNativeTarget "slide" */ = {
+		CE603D1922521C050021FEAE /* Build configuration list for PBXNativeTarget "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE603D1A22521C050021FEAE /* Debug */,
