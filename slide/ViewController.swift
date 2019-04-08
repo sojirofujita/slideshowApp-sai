@@ -97,7 +97,7 @@ class ViewController: UIViewController {
             self.timer.invalidate()
         }
     }
-    
+    //
     @objc func updateTimer(_ timer: Timer){
         if tapCount % 2 == 0 {
             startStopButton.setTitle("再生", for: .normal)
